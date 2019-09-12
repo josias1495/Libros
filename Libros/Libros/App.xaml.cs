@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Libros.View;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Libros
@@ -11,7 +12,7 @@ namespace Libros
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new InicioLibrosView();
         }
 
         protected override void OnStart()

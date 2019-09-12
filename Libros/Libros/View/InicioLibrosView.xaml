@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Libros.View.InicioLibrosView">
+    <ContentPage.Content>
+        <FlexLayout>
+            <Label Text="DATOS DE AUTOR:" HorizontalOptions="Center" FontSize="Title" 
+                       FontAttributes="Italic"></Label>
+            <FlexLayout>
+                <Label Text="Nombre: " TextColor="Chocolate"></Label>
+                <Entry Placeholder="Ingrese Nombre" Text="{Binding NombreAutor}"></Entry>
+            </FlexLayout>
+            <Label Text="DATOS DE LIBROS:" HorizontalOptions="Center" FontSize="Large"></Label>
+            <FlexLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Nombre: "/>
+                <Entry Placeholder="Ingrese Nombre" Text="{Binding NombreLibro}"/>
+                <Label Text="Genero: " TextColor="Chocolate"></Label>
+                <Entry Placeholder="Ingrese Genero" Text="{Binding NombreGenero}"></Entry>
+                <Button Text="Agregar" Command="{Binding AgregarCommand}"></Button>
+            
+             <ScrollView Orientation="Both">
+                    <ListView ItemsSource="{Binding Libros}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding NombreLibros}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                 
+             </ScrollView>
+                
+                
+            </FlexLayout>
+            
+            
+        </FlexLayout>
+       
+    </ContentPage.Content>
+</ContentPage>
