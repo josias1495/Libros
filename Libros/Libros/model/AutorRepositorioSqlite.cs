@@ -23,7 +23,7 @@ namespace Libros.model
             try
             {
                 Coneccion.InsertWithChildren(NuevoAutor, recursive: true);
-                EstatusMensaje = $"Registro ingresado. Libro id:{NuevoAutor.IDAutor}, Nombre:{NuevoAutor.NombreAutor}";
+                EstatusMensaje = $"Registro ingresado. Autor id:{NuevoAutor.IDAutor}, Nombre:{NuevoAutor.NombreAutor}";
             }
 
             catch(Exception ex)
